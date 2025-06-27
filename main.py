@@ -16,8 +16,11 @@ logging.basicConfig(
 )
 
 # === Настройки ===
-BOT_TOKEN = "8028052304:AAFETr-_12avRBGhc2oj2-woXIyfjof9gE4"  # ⚠️ Не публикуй его нигде!
-GROUP_CHAT_ID = -1001234567890  # ⚠️ Укажи здесь ИД группы, куда бот должен отправлять отчёт
+import os
+
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+GROUP_CHAT_ID = int(os.environ["GROUP_CHAT_ID"])
+  # Укажи здесь ИД группы, куда бот должен отправлять отчёт
 
 # === Пункты чек-листа ===
 checklist_items = [
